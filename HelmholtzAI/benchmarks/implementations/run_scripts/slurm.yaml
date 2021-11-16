@@ -1,0 +1,27 @@
+substituteset:
+  name: sub_job
+  iofile: {in: "${job_file}.in", out: $job_file} #attributes with {} must be quoted
+  sub:
+    - {source: "#BENCHNAME#", dest: $binary}
+    - {source: "#NOTIFY_EMAIL#", dest: $mail_address}
+    - {source: "#NOTIFICATION_TYPE#", dest: $mail_mode}
+    - {source: "#NODES#", dest: $nodes}
+    - {source: "#NTASKS#", dest: $ntasks}
+    - {source: "#CPUS_PER_TASK#", dest: $cpus_per_task}
+    - {source: "#TIME_LIMIT#", dest: $walltime}
+    - {source: "#STDERRLOGFILE#", dest: $err_file}
+    - {source: "#STDOUTLOGFILE#", dest: $out_file}
+    - {source: "#PARTITION#", dest: $partition}
+    - {source: "#GRES#", dest: $gres}
+    - {source: "#ACCOUNT#", dest: $account}
+    - {source: "#ADDITIONAL_JOB_CONFIG#", dest: $additional_job_config}
+    - {source: "#ENV#", dest: $env}
+    - {source: "#PREPROCESS#", dest: $preprocess}
+    - {source: "#MEASUREMENT#", dest: $measurement}
+    - {source: "#STARTER#", dest: srun}
+    - {source: "#ARGS_STARTER#", dest: $args_starter}
+    - {source: "#EXECUTABLE#", dest: $binary}
+    - {source: "#ARGS_EXECUTABLE#", dest: $args}
+    - {source: "#POSTPROCESS#", dest: $postprocess}
+    - {source: "#READY#", _: $ready_file } # _ can be used here as well instead of dest (should be used for multiline output)
+

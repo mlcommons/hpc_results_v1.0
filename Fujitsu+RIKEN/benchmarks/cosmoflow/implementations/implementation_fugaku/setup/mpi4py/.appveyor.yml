@@ -1,0 +1,62 @@
+# https://ci.appveyor.com/project/mpi4py/mpi4py
+
+environment:
+
+  matrix:
+    - PYTHON: "C:\\Python27"
+    - PYTHON: "C:\\Python27-x64"
+    - PYTHON: "C:\\Python35"
+    - PYTHON: "C:\\Python35-x64"
+    - PYTHON: "C:\\Python36"
+    - PYTHON: "C:\\Python36-x64"
+    - PYTHON: "C:\\Python37"
+    - PYTHON: "C:\\Python37-x64"
+    - PYTHON: "C:\\Python38"
+    - PYTHON: "C:\\Python38-x64"
+
+clone_depth: 3
+
+branches:
+  only:
+    - master
+    - maint
+    - ci/all
+    - ci/appveyor
+
+init:
+  - "ECHO Python from %PYTHON%"
+
+install:
+  # Python
+  - "%PYTHON%\\python.exe --version"
+  - "%PYTHON%\\python.exe -m pip install --upgrade pip"
+  - "%PYTHON%\\python.exe -m pip --version"
+  - "%PYTHON%\\python.exe -m pip install --upgrade wheel"
+  - "%PYTHON%\\python.exe -m wheel version"
+  # Cython
+  - "%PYTHON%\\python.exe -m pip install Cython"
+  - "%PYTHON%\\python.exe -m cython --version"
+  # Microsoft MPI
+  - "powershell .azure\\install-msmpi.ps1"
+  - "SetEnvMPI.cmd"
+
+build: off
+build_script:
+  - "%PYTHON%\\python.exe setup.py build"
+  - "%PYTHON%\\python.exe setup.py --quiet bdist_wheel"
+  - "%PYTHON%\\python.exe setup.py --quiet bdist_msi"
+
+test: off
+test_script:
+  - "%PYTHON%\\Scripts\\pip.exe install --no-cache-dir --no-index --find-links=dist\\ mpi4py"
+  - "\"%MSMPI_BIN%\\mpiexec.exe\" -n 1 %PYTHON%\\python.exe %CD%\\test\\runtests.py -v -f --no-builddir"
+  - "\"%MSMPI_BIN%\\mpiexec.exe\" -n 1 %PYTHON%\\python.exe %CD%\\demo\\futures\\test_futures.py -v"
+  - "\"%MSMPI_BIN%\\mpiexec.exe\" -n 2 %PYTHON%\\python.exe %CD%\\demo\\futures\\test_futures.py -v"
+  - "%PYTHON%\\Scripts\\pip.exe uninstall --yes mpi4py"
+
+artifacts:
+  - path: dist\*
+
+#cache:
+#  - C:\Downloads\MSMPI -> .azure\install-msmpi.ps1
+#  - '%LOCALAPPDATA%\pip\Cache'

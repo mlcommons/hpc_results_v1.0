@@ -1,0 +1,38 @@
+diff --git a/deepcam/src/deepCam/utils/comm.py b/deepcam/src/deepCam/utils/comm.py
+index 50b0af4..d933b6a 100644
+--- a/deepcam/src/deepCam/utils/comm.py
++++ b/deepcam/src/deepCam/utils/comm.py
+@@ -78,15 +78,16 @@ def get_local_size():
+ def init(method, batchnorm_group_size=1):
+     #get master address and port
+     if method == "nccl-openmpi":
+-        addrport = os.getenv("PMIX_SERVER_URI2").split("//")[1]
+-        #use that URI
+-        address = addrport.split(":")[0]
++        address = os.getenv("SLURMD_NODENAME")
+         #use the default pytorch port
+         port = "29500"
+         os.environ["MASTER_ADDR"] = address
+         os.environ["MASTER_PORT"] = port
+         rank = int(os.getenv('OMPI_COMM_WORLD_RANK',0))
+         world_size = int(os.getenv("OMPI_COMM_WORLD_SIZE",0))
+
+         #init DDP
+         dist.init_process_group(backend = "nccl",
+@@ -97,6 +98,8 @@ def init(method, batchnorm_group_size=1):
+         rank = int(os.getenv("PMIX_RANK"))
+         world_size = int(os.getenv("SLURM_NTASKS"))
+         address = os.getenv("SLURM_LAUNCH_NODE_IPADDR")
++        address = os.getenv("SLURMD_NODENAME")
+         port = "29500"
+         os.environ["MASTER_ADDR"] = address
+         os.environ["MASTER_PORT"] = port
+@@ -110,6 +113,8 @@ def init(method, batchnorm_group_size=1):
+         rank = int(os.getenv("PMI_RANK"))
+         world_size = int(os.getenv("SLURM_NTASKS"))
+         address = os.getenv("SLURM_LAUNCH_NODE_IPADDR")
++        address = os.getenv("SLURMD_NODENAME")
+         port = "29500"
+         os.environ["MASTER_ADDR"] = address
+         os.environ["MASTER_PORT"] = port
+

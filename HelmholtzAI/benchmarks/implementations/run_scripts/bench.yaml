@@ -1,0 +1,79 @@
+# Use with `jube run bench.yaml`
+# show results with `jube result -a run`
+
+name: MLPerf
+outpath: run
+comment: A jobsystem example
+
+parameterset:
+  #Job configuration
+  - name: executeset
+    parameter:
+      - {name: job_file, _: job.run}
+      - {name: mail_address, _: a.strube@fz-juelich.de}
+      - {name: mail_mode, _: ALL}
+      - {name: nodes, type: int, _: "2"}
+      - {name: ntasks, type: int, _: $nodes}
+      - {name: cpus_per_task, type: int, _: 1}
+      - {name: walltime, _: "00:01:00"} #: must be quoted
+      - {name: out_file, _: job.out}
+      - {name: err_file, _: job.err}
+      - {name: partition, _: develgpus}
+      - {name: gres, _: "gpu:4"}
+      - {name: account, _: jscbenchmark}
+      - {name: additional_job_config, _: ""}
+      - {name: env, _: module load GCCcore ParaStationMPI}
+      - {name: preprocess, _: ""}
+      - {name: measurement, _: time -p}
+      - {name: args_starter, _: --cpu_bind=none,v}
+      - {name: binary,  _: nvidia-smi}
+      - {name: args, _: ""}
+      - {name: postprocess, _: ""}
+      - {name: ready_file, _: ready}
+
+
+################ IGNORE THIS PART UNTIL THE PATTERNSET #########
+#Load jobfile
+fileset:
+  name: files
+  copy: ${job_file}.in
+
+# Replace the values from job.run.in above with those from the executeset for slurm
+substituteset:
+  name: sub_job
+  init_with: slurm.yaml
+
+# Submit job
+step:
+  name: submit
+  use: [executeset,files,sub_job]
+  do:
+    done_file: $ready_file
+    _: sbatch $job_file #shell command
+################# STOP IGNORING ##########################
+
+
+# This is the regex for scraping results
+patternset:
+  name: pattern
+  pattern:
+    - {name: nvidia_smi_version, _: "NVIDIA-SMI\ ([0-9]*.[0-9]*.[0-9]*)"}
+    - {name: driver_version, _: "Driver Version:\ ([0-9]*.[0-9]*.[0-9]*)"}
+    - {name: cuda_version, _: "CUDA Version: $jube_pat_fp"}
+    - {name: runtime, _: "real $jube_pat_fp"}
+    - {name: error_code, _: JUBE_ERR_CODE=$jube_pat_int}
+    - {name: jobid, _: Submitted batch job $jube_pat_int}
+
+analyser:
+  name: analyse
+  use: pattern
+  analyse:
+    step: submit
+    file: stdout,stderr,job.out,job.err
+
+result:
+  use: analyse
+  table:
+    name: result
+    style: pretty
+    column: [jobid, nvidia_smi_version, driver_version, cuda_version, runtime, error_code]

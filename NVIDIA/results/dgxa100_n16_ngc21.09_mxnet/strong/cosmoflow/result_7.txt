@@ -1,0 +1,158 @@
+:::MLLOG {"namespace": "", "time_ms": 1632835828494, "event_type": "POINT_IN_TIME", "key": "cache_clear", "value": null, "metadata": {"file": "train.py", "lineno": 134}}
+:::MLLOG {"namespace": "", "time_ms": 1632835828524, "event_type": "INTERVAL_START", "key": "init_start", "value": null, "metadata": {"file": "train.py", "lineno": 135}}
+:::MLLOG {"namespace": "", "time_ms": 1632835828524, "event_type": "POINT_IN_TIME", "key": "submission_benchmark", "value": "cosmoflow", "metadata": {"file": "train.py", "lineno": 137}}
+:::MLLOG {"namespace": "", "time_ms": 1632835828524, "event_type": "POINT_IN_TIME", "key": "submission_org", "value": "NVIDIA", "metadata": {"file": "train.py", "lineno": 139}}
+:::MLLOG {"namespace": "", "time_ms": 1632835828524, "event_type": "POINT_IN_TIME", "key": "submission_division", "value": "closed", "metadata": {"file": "train.py", "lineno": 140}}
+:::MLLOG {"namespace": "", "time_ms": 1632835828524, "event_type": "POINT_IN_TIME", "key": "submission_status", "value": "onprem", "metadata": {"file": "train.py", "lineno": 141}}
+:::MLLOG {"namespace": "", "time_ms": 1632835828524, "event_type": "POINT_IN_TIME", "key": "submission_platform", "value": "16xNVIDIA DGX A100", "metadata": {"file": "train.py", "lineno": 142}}
+:::MLLOG {"namespace": "", "time_ms": 1632835828525, "event_type": "POINT_IN_TIME", "key": "number_of_nodes", "value": 16, "metadata": {"file": "train.py", "lineno": 145}}
+:::MLLOG {"namespace": "", "time_ms": 1632835828525, "event_type": "POINT_IN_TIME", "key": "accelerators_per_node", "value": 8, "metadata": {"file": "train.py", "lineno": 146}}
+:::MLLOG {"namespace": "", "time_ms": 1632835873526, "event_type": "POINT_IN_TIME", "key": "opt_weight_decay", "value": 0.0, "metadata": {"file": "train.py", "lineno": 165}}
+:::MLLOG {"namespace": "", "time_ms": 1632835873527, "event_type": "POINT_IN_TIME", "key": "dropout", "value": 0.5, "metadata": {"file": "train.py", "lineno": 167}}
+:::MLLOG {"namespace": "", "time_ms": 1632835874434, "event_type": "POINT_IN_TIME", "key": "global_batch_size", "value": 128, "metadata": {"file": "/workspace/cosmoflow/data.py", "lineno": 352}}
+:::MLLOG {"namespace": "", "time_ms": 1632835874434, "event_type": "POINT_IN_TIME", "key": "train_samples", "value": 524288, "metadata": {"file": "/workspace/cosmoflow/data.py", "lineno": 354}}
+:::MLLOG {"namespace": "", "time_ms": 1632835874435, "event_type": "POINT_IN_TIME", "key": "eval_samples", "value": 65536, "metadata": {"file": "/workspace/cosmoflow/data.py", "lineno": 355}}
+:::MLLOG {"namespace": "", "time_ms": 1632835874435, "event_type": "POINT_IN_TIME", "key": "opt_base_learning_rate", "value": 0.004, "metadata": {"file": "train.py", "lineno": 92}}
+:::MLLOG {"namespace": "", "time_ms": 1632835874435, "event_type": "POINT_IN_TIME", "key": "opt_learning_rate_warmup_epochs", "value": 4, "metadata": {"file": "train.py", "lineno": 94}}
+:::MLLOG {"namespace": "", "time_ms": 1632835874435, "event_type": "POINT_IN_TIME", "key": "opt_learning_rate_warmup_factor", "value": 4, "metadata": {"file": "train.py", "lineno": 96}}
+:::MLLOG {"namespace": "", "time_ms": 1632835874435, "event_type": "POINT_IN_TIME", "key": "opt_learning_rate_decay_boundary_epochs", "value": [16, 32], "metadata": {"file": "train.py", "lineno": 98}}
+:::MLLOG {"namespace": "", "time_ms": 1632835874435, "event_type": "POINT_IN_TIME", "key": "opt_learning_rate_decay_factor", "value": [0.25, 0.125], "metadata": {"file": "train.py", "lineno": 100}}
+:::MLLOG {"namespace": "", "time_ms": 1632835874435, "event_type": "POINT_IN_TIME", "key": "opt_name", "value": "sgd", "metadata": {"file": "train.py", "lineno": 184}}
+:::MLLOG {"namespace": "", "time_ms": 1632835874462, "event_type": "INTERVAL_END", "key": "init_stop", "value": null, "metadata": {"file": "/workspace/cosmoflow/utils.py", "lineno": 144}}
+:::MLLOG {"namespace": "", "time_ms": 1632835874462, "event_type": "INTERVAL_START", "key": "run_start", "value": null, "metadata": {"file": "train.py", "lineno": 206}}
+:::MLLOG {"namespace": "", "time_ms": 1632835874462, "event_type": "INTERVAL_START", "key": "staging_start", "value": null, "metadata": {"file": "/workspace/cosmoflow/data.py", "lineno": 359}}
+:::MLLOG {"namespace": "", "time_ms": 1632836223627, "event_type": "INTERVAL_END", "key": "staging_stop", "value": null, "metadata": {"file": "/workspace/cosmoflow/data.py", "lineno": 362, "staging_duration": 349.1650996208191}}
+:::MLLOG {"namespace": "", "time_ms": 1632836223627, "event_type": "INTERVAL_START", "key": "epoch_start", "value": null, "metadata": {"file": "train.py", "lineno": 215, "epoch_num": 1}}
+:::MLLOG {"namespace": "", "time_ms": 1632836286962, "event_type": "POINT_IN_TIME", "key": "throughput", "value": 8278.124606645484, "metadata": {"file": "train.py", "lineno": 352, "epoch_num": 1}}
+:::MLLOG {"namespace": "", "time_ms": 1632836286962, "event_type": "INTERVAL_START", "key": "eval_start", "value": null, "metadata": {"file": "train.py", "lineno": 360, "epoch_num": 1}}
+:::MLLOG {"namespace": "", "time_ms": 1632836299011, "event_type": "INTERVAL_END", "key": "eval_stop", "value": null, "metadata": {"file": "/workspace/cosmoflow/utils.py", "lineno": 144, "epoch_num": 1}}
+:::MLLOG {"namespace": "", "time_ms": 1632836299012, "event_type": "INTERVAL_END", "key": "epoch_stop", "value": null, "metadata": {"file": "/workspace/cosmoflow/utils.py", "lineno": 144, "epoch_num": 1}}
+:::MLLOG {"namespace": "", "time_ms": 1632836299012, "event_type": "POINT_IN_TIME", "key": "eval_error", "value": 0.2957583652061103, "metadata": {"file": "train.py", "lineno": 232, "epoch_num": 1}}
+:::MLLOG {"namespace": "", "time_ms": 1632836299012, "event_type": "POINT_IN_TIME", "key": "eval_accuracy", "value": -0.2957583652061103, "metadata": {"file": "train.py", "lineno": 232, "epoch_num": 1}}
+:::MLLOG {"namespace": "", "time_ms": 1632836299012, "event_type": "INTERVAL_START", "key": "epoch_start", "value": null, "metadata": {"file": "train.py", "lineno": 215, "epoch_num": 2}}
+:::MLLOG {"namespace": "", "time_ms": 1632836359164, "event_type": "POINT_IN_TIME", "key": "throughput", "value": 8716.112094944576, "metadata": {"file": "train.py", "lineno": 352, "epoch_num": 2}}
+:::MLLOG {"namespace": "", "time_ms": 1632836359164, "event_type": "INTERVAL_START", "key": "eval_start", "value": null, "metadata": {"file": "train.py", "lineno": 360, "epoch_num": 2}}
+:::MLLOG {"namespace": "", "time_ms": 1632836362797, "event_type": "INTERVAL_END", "key": "eval_stop", "value": null, "metadata": {"file": "/workspace/cosmoflow/utils.py", "lineno": 144, "epoch_num": 2}}
+:::MLLOG {"namespace": "", "time_ms": 1632836362797, "event_type": "INTERVAL_END", "key": "epoch_stop", "value": null, "metadata": {"file": "/workspace/cosmoflow/utils.py", "lineno": 144, "epoch_num": 2}}
+:::MLLOG {"namespace": "", "time_ms": 1632836362798, "event_type": "POINT_IN_TIME", "key": "eval_error", "value": 0.24838191269373056, "metadata": {"file": "train.py", "lineno": 232, "epoch_num": 2}}
+:::MLLOG {"namespace": "", "time_ms": 1632836362798, "event_type": "POINT_IN_TIME", "key": "eval_accuracy", "value": -0.24838191269373056, "metadata": {"file": "train.py", "lineno": 232, "epoch_num": 2}}
+:::MLLOG {"namespace": "", "time_ms": 1632836362798, "event_type": "INTERVAL_START", "key": "epoch_start", "value": null, "metadata": {"file": "train.py", "lineno": 215, "epoch_num": 3}}
+:::MLLOG {"namespace": "", "time_ms": 1632836423750, "event_type": "POINT_IN_TIME", "key": "throughput", "value": 8601.68156579115, "metadata": {"file": "train.py", "lineno": 352, "epoch_num": 3}}
+:::MLLOG {"namespace": "", "time_ms": 1632836423750, "event_type": "INTERVAL_START", "key": "eval_start", "value": null, "metadata": {"file": "train.py", "lineno": 360, "epoch_num": 3}}
+:::MLLOG {"namespace": "", "time_ms": 1632836431132, "event_type": "INTERVAL_END", "key": "eval_stop", "value": null, "metadata": {"file": "/workspace/cosmoflow/utils.py", "lineno": 144, "epoch_num": 3}}
+:::MLLOG {"namespace": "", "time_ms": 1632836431133, "event_type": "INTERVAL_END", "key": "epoch_stop", "value": null, "metadata": {"file": "/workspace/cosmoflow/utils.py", "lineno": 144, "epoch_num": 3}}
+:::MLLOG {"namespace": "", "time_ms": 1632836431133, "event_type": "POINT_IN_TIME", "key": "eval_error", "value": 0.2204397916648304, "metadata": {"file": "train.py", "lineno": 232, "epoch_num": 3}}
+:::MLLOG {"namespace": "", "time_ms": 1632836431133, "event_type": "POINT_IN_TIME", "key": "eval_accuracy", "value": -0.2204397916648304, "metadata": {"file": "train.py", "lineno": 232, "epoch_num": 3}}
+:::MLLOG {"namespace": "", "time_ms": 1632836431133, "event_type": "INTERVAL_START", "key": "epoch_start", "value": null, "metadata": {"file": "train.py", "lineno": 215, "epoch_num": 4}}
+:::MLLOG {"namespace": "", "time_ms": 1632836491679, "event_type": "POINT_IN_TIME", "key": "throughput", "value": 8659.448483833829, "metadata": {"file": "train.py", "lineno": 352, "epoch_num": 4}}
+:::MLLOG {"namespace": "", "time_ms": 1632836491679, "event_type": "INTERVAL_START", "key": "eval_start", "value": null, "metadata": {"file": "train.py", "lineno": 360, "epoch_num": 4}}
+:::MLLOG {"namespace": "", "time_ms": 1632836494961, "event_type": "INTERVAL_END", "key": "eval_stop", "value": null, "metadata": {"file": "/workspace/cosmoflow/utils.py", "lineno": 144, "epoch_num": 4}}
+:::MLLOG {"namespace": "", "time_ms": 1632836494962, "event_type": "INTERVAL_END", "key": "epoch_stop", "value": null, "metadata": {"file": "/workspace/cosmoflow/utils.py", "lineno": 144, "epoch_num": 4}}
+:::MLLOG {"namespace": "", "time_ms": 1632836494962, "event_type": "POINT_IN_TIME", "key": "eval_error", "value": 0.1779109227610055, "metadata": {"file": "train.py", "lineno": 232, "epoch_num": 4}}
+:::MLLOG {"namespace": "", "time_ms": 1632836494962, "event_type": "POINT_IN_TIME", "key": "eval_accuracy", "value": -0.1779109227610055, "metadata": {"file": "train.py", "lineno": 232, "epoch_num": 4}}
+:::MLLOG {"namespace": "", "time_ms": 1632836494962, "event_type": "INTERVAL_START", "key": "epoch_start", "value": null, "metadata": {"file": "train.py", "lineno": 215, "epoch_num": 5}}
+:::MLLOG {"namespace": "", "time_ms": 1632836555716, "event_type": "POINT_IN_TIME", "key": "throughput", "value": 8629.771030900447, "metadata": {"file": "train.py", "lineno": 352, "epoch_num": 5}}
+:::MLLOG {"namespace": "", "time_ms": 1632836555716, "event_type": "INTERVAL_START", "key": "eval_start", "value": null, "metadata": {"file": "train.py", "lineno": 360, "epoch_num": 5}}
+:::MLLOG {"namespace": "", "time_ms": 1632836558895, "event_type": "INTERVAL_END", "key": "eval_stop", "value": null, "metadata": {"file": "/workspace/cosmoflow/utils.py", "lineno": 144, "epoch_num": 5}}
+:::MLLOG {"namespace": "", "time_ms": 1632836558895, "event_type": "INTERVAL_END", "key": "epoch_stop", "value": null, "metadata": {"file": "/workspace/cosmoflow/utils.py", "lineno": 144, "epoch_num": 5}}
+:::MLLOG {"namespace": "", "time_ms": 1632836558895, "event_type": "POINT_IN_TIME", "key": "eval_error", "value": 0.17884617962595437, "metadata": {"file": "train.py", "lineno": 232, "epoch_num": 5}}
+:::MLLOG {"namespace": "", "time_ms": 1632836558895, "event_type": "POINT_IN_TIME", "key": "eval_accuracy", "value": -0.17884617962595437, "metadata": {"file": "train.py", "lineno": 232, "epoch_num": 5}}
+:::MLLOG {"namespace": "", "time_ms": 1632836558895, "event_type": "INTERVAL_START", "key": "epoch_start", "value": null, "metadata": {"file": "train.py", "lineno": 215, "epoch_num": 6}}
+:::MLLOG {"namespace": "", "time_ms": 1632836619201, "event_type": "POINT_IN_TIME", "key": "throughput", "value": 8693.821376579193, "metadata": {"file": "train.py", "lineno": 352, "epoch_num": 6}}
+:::MLLOG {"namespace": "", "time_ms": 1632836619202, "event_type": "INTERVAL_START", "key": "eval_start", "value": null, "metadata": {"file": "train.py", "lineno": 360, "epoch_num": 6}}
+:::MLLOG {"namespace": "", "time_ms": 1632836622103, "event_type": "INTERVAL_END", "key": "eval_stop", "value": null, "metadata": {"file": "/workspace/cosmoflow/utils.py", "lineno": 144, "epoch_num": 6}}
+:::MLLOG {"namespace": "", "time_ms": 1632836622104, "event_type": "INTERVAL_END", "key": "epoch_stop", "value": null, "metadata": {"file": "/workspace/cosmoflow/utils.py", "lineno": 144, "epoch_num": 6}}
+:::MLLOG {"namespace": "", "time_ms": 1632836622104, "event_type": "POINT_IN_TIME", "key": "eval_error", "value": 0.16184824615702884, "metadata": {"file": "train.py", "lineno": 232, "epoch_num": 6}}
+:::MLLOG {"namespace": "", "time_ms": 1632836622104, "event_type": "POINT_IN_TIME", "key": "eval_accuracy", "value": -0.16184824615702884, "metadata": {"file": "train.py", "lineno": 232, "epoch_num": 6}}
+:::MLLOG {"namespace": "", "time_ms": 1632836622104, "event_type": "INTERVAL_START", "key": "epoch_start", "value": null, "metadata": {"file": "train.py", "lineno": 215, "epoch_num": 7}}
+:::MLLOG {"namespace": "", "time_ms": 1632836682561, "event_type": "POINT_IN_TIME", "key": "throughput", "value": 8672.09623361672, "metadata": {"file": "train.py", "lineno": 352, "epoch_num": 7}}
+:::MLLOG {"namespace": "", "time_ms": 1632836682561, "event_type": "INTERVAL_START", "key": "eval_start", "value": null, "metadata": {"file": "train.py", "lineno": 360, "epoch_num": 7}}
+:::MLLOG {"namespace": "", "time_ms": 1632836685270, "event_type": "INTERVAL_END", "key": "eval_stop", "value": null, "metadata": {"file": "/workspace/cosmoflow/utils.py", "lineno": 144, "epoch_num": 7}}
+:::MLLOG {"namespace": "", "time_ms": 1632836685270, "event_type": "INTERVAL_END", "key": "epoch_stop", "value": null, "metadata": {"file": "/workspace/cosmoflow/utils.py", "lineno": 144, "epoch_num": 7}}
+:::MLLOG {"namespace": "", "time_ms": 1632836685271, "event_type": "POINT_IN_TIME", "key": "eval_error", "value": 0.1770161387976259, "metadata": {"file": "train.py", "lineno": 232, "epoch_num": 7}}
+:::MLLOG {"namespace": "", "time_ms": 1632836685271, "event_type": "POINT_IN_TIME", "key": "eval_accuracy", "value": -0.1770161387976259, "metadata": {"file": "train.py", "lineno": 232, "epoch_num": 7}}
+:::MLLOG {"namespace": "", "time_ms": 1632836685271, "event_type": "INTERVAL_START", "key": "epoch_start", "value": null, "metadata": {"file": "train.py", "lineno": 215, "epoch_num": 8}}
+:::MLLOG {"namespace": "", "time_ms": 1632836745690, "event_type": "POINT_IN_TIME", "key": "throughput", "value": 8677.586863006403, "metadata": {"file": "train.py", "lineno": 352, "epoch_num": 8}}
+:::MLLOG {"namespace": "", "time_ms": 1632836745690, "event_type": "INTERVAL_START", "key": "eval_start", "value": null, "metadata": {"file": "train.py", "lineno": 360, "epoch_num": 8}}
+:::MLLOG {"namespace": "", "time_ms": 1632836749394, "event_type": "INTERVAL_END", "key": "eval_stop", "value": null, "metadata": {"file": "/workspace/cosmoflow/utils.py", "lineno": 144, "epoch_num": 8}}
+:::MLLOG {"namespace": "", "time_ms": 1632836749395, "event_type": "INTERVAL_END", "key": "epoch_stop", "value": null, "metadata": {"file": "/workspace/cosmoflow/utils.py", "lineno": 144, "epoch_num": 8}}
+:::MLLOG {"namespace": "", "time_ms": 1632836749395, "event_type": "POINT_IN_TIME", "key": "eval_error", "value": 0.14157617006981366, "metadata": {"file": "train.py", "lineno": 232, "epoch_num": 8}}
+:::MLLOG {"namespace": "", "time_ms": 1632836749395, "event_type": "POINT_IN_TIME", "key": "eval_accuracy", "value": -0.14157617006981366, "metadata": {"file": "train.py", "lineno": 232, "epoch_num": 8}}
+:::MLLOG {"namespace": "", "time_ms": 1632836749395, "event_type": "INTERVAL_START", "key": "epoch_start", "value": null, "metadata": {"file": "train.py", "lineno": 215, "epoch_num": 9}}
+:::MLLOG {"namespace": "", "time_ms": 1632836809749, "event_type": "POINT_IN_TIME", "key": "throughput", "value": 8686.919398221939, "metadata": {"file": "train.py", "lineno": 352, "epoch_num": 9}}
+:::MLLOG {"namespace": "", "time_ms": 1632836809750, "event_type": "INTERVAL_START", "key": "eval_start", "value": null, "metadata": {"file": "train.py", "lineno": 360, "epoch_num": 9}}
+:::MLLOG {"namespace": "", "time_ms": 1632836812324, "event_type": "INTERVAL_END", "key": "eval_stop", "value": null, "metadata": {"file": "/workspace/cosmoflow/utils.py", "lineno": 144, "epoch_num": 9}}
+:::MLLOG {"namespace": "", "time_ms": 1632836812325, "event_type": "INTERVAL_END", "key": "epoch_stop", "value": null, "metadata": {"file": "/workspace/cosmoflow/utils.py", "lineno": 144, "epoch_num": 9}}
+:::MLLOG {"namespace": "", "time_ms": 1632836812325, "event_type": "POINT_IN_TIME", "key": "eval_error", "value": 0.16178691378809162, "metadata": {"file": "train.py", "lineno": 232, "epoch_num": 9}}
+:::MLLOG {"namespace": "", "time_ms": 1632836812325, "event_type": "POINT_IN_TIME", "key": "eval_accuracy", "value": -0.16178691378809162, "metadata": {"file": "train.py", "lineno": 232, "epoch_num": 9}}
+:::MLLOG {"namespace": "", "time_ms": 1632836812325, "event_type": "INTERVAL_START", "key": "epoch_start", "value": null, "metadata": {"file": "train.py", "lineno": 215, "epoch_num": 10}}
+:::MLLOG {"namespace": "", "time_ms": 1632836872733, "event_type": "POINT_IN_TIME", "key": "throughput", "value": 8679.168548045674, "metadata": {"file": "train.py", "lineno": 352, "epoch_num": 10}}
+:::MLLOG {"namespace": "", "time_ms": 1632836872733, "event_type": "INTERVAL_START", "key": "eval_start", "value": null, "metadata": {"file": "train.py", "lineno": 360, "epoch_num": 10}}
+:::MLLOG {"namespace": "", "time_ms": 1632836886078, "event_type": "INTERVAL_END", "key": "eval_stop", "value": null, "metadata": {"file": "/workspace/cosmoflow/utils.py", "lineno": 144, "epoch_num": 10}}
+:::MLLOG {"namespace": "", "time_ms": 1632836886078, "event_type": "INTERVAL_END", "key": "epoch_stop", "value": null, "metadata": {"file": "/workspace/cosmoflow/utils.py", "lineno": 144, "epoch_num": 10}}
+:::MLLOG {"namespace": "", "time_ms": 1632836886078, "event_type": "POINT_IN_TIME", "key": "eval_error", "value": 0.1513053172289131, "metadata": {"file": "train.py", "lineno": 232, "epoch_num": 10}}
+:::MLLOG {"namespace": "", "time_ms": 1632836886078, "event_type": "POINT_IN_TIME", "key": "eval_accuracy", "value": -0.1513053172289131, "metadata": {"file": "train.py", "lineno": 232, "epoch_num": 10}}
+:::MLLOG {"namespace": "", "time_ms": 1632836886079, "event_type": "INTERVAL_START", "key": "epoch_start", "value": null, "metadata": {"file": "train.py", "lineno": 215, "epoch_num": 11}}
+:::MLLOG {"namespace": "", "time_ms": 1632836946956, "event_type": "POINT_IN_TIME", "key": "throughput", "value": 8612.157996580238, "metadata": {"file": "train.py", "lineno": 352, "epoch_num": 11}}
+:::MLLOG {"namespace": "", "time_ms": 1632836946957, "event_type": "INTERVAL_START", "key": "eval_start", "value": null, "metadata": {"file": "train.py", "lineno": 360, "epoch_num": 11}}
+:::MLLOG {"namespace": "", "time_ms": 1632836953619, "event_type": "INTERVAL_END", "key": "eval_stop", "value": null, "metadata": {"file": "/workspace/cosmoflow/utils.py", "lineno": 144, "epoch_num": 11}}
+:::MLLOG {"namespace": "", "time_ms": 1632836953619, "event_type": "INTERVAL_END", "key": "epoch_stop", "value": null, "metadata": {"file": "/workspace/cosmoflow/utils.py", "lineno": 144, "epoch_num": 11}}
+:::MLLOG {"namespace": "", "time_ms": 1632836953619, "event_type": "POINT_IN_TIME", "key": "eval_error", "value": 0.1654667257644178, "metadata": {"file": "train.py", "lineno": 232, "epoch_num": 11}}
+:::MLLOG {"namespace": "", "time_ms": 1632836953619, "event_type": "POINT_IN_TIME", "key": "eval_accuracy", "value": -0.1654667257644178, "metadata": {"file": "train.py", "lineno": 232, "epoch_num": 11}}
+:::MLLOG {"namespace": "", "time_ms": 1632836953619, "event_type": "INTERVAL_START", "key": "epoch_start", "value": null, "metadata": {"file": "train.py", "lineno": 215, "epoch_num": 12}}
+:::MLLOG {"namespace": "", "time_ms": 1632837014145, "event_type": "POINT_IN_TIME", "key": "throughput", "value": 8662.313772867064, "metadata": {"file": "train.py", "lineno": 352, "epoch_num": 12}}
+:::MLLOG {"namespace": "", "time_ms": 1632837014145, "event_type": "INTERVAL_START", "key": "eval_start", "value": null, "metadata": {"file": "train.py", "lineno": 360, "epoch_num": 12}}
+:::MLLOG {"namespace": "", "time_ms": 1632837020175, "event_type": "INTERVAL_END", "key": "eval_stop", "value": null, "metadata": {"file": "/workspace/cosmoflow/utils.py", "lineno": 144, "epoch_num": 12}}
+:::MLLOG {"namespace": "", "time_ms": 1632837020176, "event_type": "INTERVAL_END", "key": "epoch_stop", "value": null, "metadata": {"file": "/workspace/cosmoflow/utils.py", "lineno": 144, "epoch_num": 12}}
+:::MLLOG {"namespace": "", "time_ms": 1632837020176, "event_type": "POINT_IN_TIME", "key": "eval_error", "value": 0.13649773526866443, "metadata": {"file": "train.py", "lineno": 232, "epoch_num": 12}}
+:::MLLOG {"namespace": "", "time_ms": 1632837020176, "event_type": "POINT_IN_TIME", "key": "eval_accuracy", "value": -0.13649773526866443, "metadata": {"file": "train.py", "lineno": 232, "epoch_num": 12}}
+:::MLLOG {"namespace": "", "time_ms": 1632837020176, "event_type": "INTERVAL_START", "key": "epoch_start", "value": null, "metadata": {"file": "train.py", "lineno": 215, "epoch_num": 13}}
+:::MLLOG {"namespace": "", "time_ms": 1632837080924, "event_type": "POINT_IN_TIME", "key": "throughput", "value": 8630.62143165746, "metadata": {"file": "train.py", "lineno": 352, "epoch_num": 13}}
+:::MLLOG {"namespace": "", "time_ms": 1632837080924, "event_type": "INTERVAL_START", "key": "eval_start", "value": null, "metadata": {"file": "train.py", "lineno": 360, "epoch_num": 13}}
+:::MLLOG {"namespace": "", "time_ms": 1632837086320, "event_type": "INTERVAL_END", "key": "eval_stop", "value": null, "metadata": {"file": "/workspace/cosmoflow/utils.py", "lineno": 144, "epoch_num": 13}}
+:::MLLOG {"namespace": "", "time_ms": 1632837086320, "event_type": "INTERVAL_END", "key": "epoch_stop", "value": null, "metadata": {"file": "/workspace/cosmoflow/utils.py", "lineno": 144, "epoch_num": 13}}
+:::MLLOG {"namespace": "", "time_ms": 1632837086320, "event_type": "POINT_IN_TIME", "key": "eval_error", "value": 0.1321435566897931, "metadata": {"file": "train.py", "lineno": 232, "epoch_num": 13}}
+:::MLLOG {"namespace": "", "time_ms": 1632837086320, "event_type": "POINT_IN_TIME", "key": "eval_accuracy", "value": -0.1321435566897931, "metadata": {"file": "train.py", "lineno": 232, "epoch_num": 13}}
+:::MLLOG {"namespace": "", "time_ms": 1632837086321, "event_type": "INTERVAL_START", "key": "epoch_start", "value": null, "metadata": {"file": "train.py", "lineno": 215, "epoch_num": 14}}
+:::MLLOG {"namespace": "", "time_ms": 1632837147219, "event_type": "POINT_IN_TIME", "key": "throughput", "value": 8609.184526824216, "metadata": {"file": "train.py", "lineno": 352, "epoch_num": 14}}
+:::MLLOG {"namespace": "", "time_ms": 1632837147220, "event_type": "INTERVAL_START", "key": "eval_start", "value": null, "metadata": {"file": "train.py", "lineno": 360, "epoch_num": 14}}
+:::MLLOG {"namespace": "", "time_ms": 1632837152378, "event_type": "INTERVAL_END", "key": "eval_stop", "value": null, "metadata": {"file": "/workspace/cosmoflow/utils.py", "lineno": 144, "epoch_num": 14}}
+:::MLLOG {"namespace": "", "time_ms": 1632837152379, "event_type": "INTERVAL_END", "key": "epoch_stop", "value": null, "metadata": {"file": "/workspace/cosmoflow/utils.py", "lineno": 144, "epoch_num": 14}}
+:::MLLOG {"namespace": "", "time_ms": 1632837152379, "event_type": "POINT_IN_TIME", "key": "eval_error", "value": 0.1327720873341129, "metadata": {"file": "train.py", "lineno": 232, "epoch_num": 14}}
+:::MLLOG {"namespace": "", "time_ms": 1632837152379, "event_type": "POINT_IN_TIME", "key": "eval_accuracy", "value": -0.1327720873341129, "metadata": {"file": "train.py", "lineno": 232, "epoch_num": 14}}
+:::MLLOG {"namespace": "", "time_ms": 1632837152379, "event_type": "INTERVAL_START", "key": "epoch_start", "value": null, "metadata": {"file": "train.py", "lineno": 215, "epoch_num": 15}}
+:::MLLOG {"namespace": "", "time_ms": 1632837212889, "event_type": "POINT_IN_TIME", "key": "throughput", "value": 8664.553011773278, "metadata": {"file": "train.py", "lineno": 352, "epoch_num": 15}}
+:::MLLOG {"namespace": "", "time_ms": 1632837212889, "event_type": "INTERVAL_START", "key": "eval_start", "value": null, "metadata": {"file": "train.py", "lineno": 360, "epoch_num": 15}}
+:::MLLOG {"namespace": "", "time_ms": 1632837217846, "event_type": "INTERVAL_END", "key": "eval_stop", "value": null, "metadata": {"file": "/workspace/cosmoflow/utils.py", "lineno": 144, "epoch_num": 15}}
+:::MLLOG {"namespace": "", "time_ms": 1632837217846, "event_type": "INTERVAL_END", "key": "epoch_stop", "value": null, "metadata": {"file": "/workspace/cosmoflow/utils.py", "lineno": 144, "epoch_num": 15}}
+:::MLLOG {"namespace": "", "time_ms": 1632837217846, "event_type": "POINT_IN_TIME", "key": "eval_error", "value": 0.14663523424678715, "metadata": {"file": "train.py", "lineno": 232, "epoch_num": 15}}
+:::MLLOG {"namespace": "", "time_ms": 1632837217846, "event_type": "POINT_IN_TIME", "key": "eval_accuracy", "value": -0.14663523424678715, "metadata": {"file": "train.py", "lineno": 232, "epoch_num": 15}}
+:::MLLOG {"namespace": "", "time_ms": 1632837217846, "event_type": "INTERVAL_START", "key": "epoch_start", "value": null, "metadata": {"file": "train.py", "lineno": 215, "epoch_num": 16}}
+:::MLLOG {"namespace": "", "time_ms": 1632837278360, "event_type": "POINT_IN_TIME", "key": "throughput", "value": 8663.967312753297, "metadata": {"file": "train.py", "lineno": 352, "epoch_num": 16}}
+:::MLLOG {"namespace": "", "time_ms": 1632837278360, "event_type": "INTERVAL_START", "key": "eval_start", "value": null, "metadata": {"file": "train.py", "lineno": 360, "epoch_num": 16}}
+:::MLLOG {"namespace": "", "time_ms": 1632837281995, "event_type": "INTERVAL_END", "key": "eval_stop", "value": null, "metadata": {"file": "/workspace/cosmoflow/utils.py", "lineno": 144, "epoch_num": 16}}
+:::MLLOG {"namespace": "", "time_ms": 1632837281995, "event_type": "INTERVAL_END", "key": "epoch_stop", "value": null, "metadata": {"file": "/workspace/cosmoflow/utils.py", "lineno": 144, "epoch_num": 16}}
+:::MLLOG {"namespace": "", "time_ms": 1632837281995, "event_type": "POINT_IN_TIME", "key": "eval_error", "value": 0.152403234880406, "metadata": {"file": "train.py", "lineno": 232, "epoch_num": 16}}
+:::MLLOG {"namespace": "", "time_ms": 1632837281995, "event_type": "POINT_IN_TIME", "key": "eval_accuracy", "value": -0.152403234880406, "metadata": {"file": "train.py", "lineno": 232, "epoch_num": 16}}
+:::MLLOG {"namespace": "", "time_ms": 1632837281996, "event_type": "INTERVAL_START", "key": "epoch_start", "value": null, "metadata": {"file": "train.py", "lineno": 215, "epoch_num": 17}}
+:::MLLOG {"namespace": "", "time_ms": 1632837342477, "event_type": "POINT_IN_TIME", "key": "throughput", "value": 8668.568360756251, "metadata": {"file": "train.py", "lineno": 352, "epoch_num": 17}}
+:::MLLOG {"namespace": "", "time_ms": 1632837342478, "event_type": "INTERVAL_START", "key": "eval_start", "value": null, "metadata": {"file": "train.py", "lineno": 360, "epoch_num": 17}}
+:::MLLOG {"namespace": "", "time_ms": 1632837346087, "event_type": "INTERVAL_END", "key": "eval_stop", "value": null, "metadata": {"file": "/workspace/cosmoflow/utils.py", "lineno": 144, "epoch_num": 17}}
+:::MLLOG {"namespace": "", "time_ms": 1632837346087, "event_type": "INTERVAL_END", "key": "epoch_stop", "value": null, "metadata": {"file": "/workspace/cosmoflow/utils.py", "lineno": 144, "epoch_num": 17}}
+:::MLLOG {"namespace": "", "time_ms": 1632837346087, "event_type": "POINT_IN_TIME", "key": "eval_error", "value": 0.14741712670012147, "metadata": {"file": "train.py", "lineno": 232, "epoch_num": 17}}
+:::MLLOG {"namespace": "", "time_ms": 1632837346087, "event_type": "POINT_IN_TIME", "key": "eval_accuracy", "value": -0.14741712670012147, "metadata": {"file": "train.py", "lineno": 232, "epoch_num": 17}}
+:::MLLOG {"namespace": "", "time_ms": 1632837346087, "event_type": "INTERVAL_START", "key": "epoch_start", "value": null, "metadata": {"file": "train.py", "lineno": 215, "epoch_num": 18}}
+:::MLLOG {"namespace": "", "time_ms": 1632837407689, "event_type": "POINT_IN_TIME", "key": "throughput", "value": 8511.01095676766, "metadata": {"file": "train.py", "lineno": 352, "epoch_num": 18}}
+:::MLLOG {"namespace": "", "time_ms": 1632837407689, "event_type": "INTERVAL_START", "key": "eval_start", "value": null, "metadata": {"file": "train.py", "lineno": 360, "epoch_num": 18}}
+:::MLLOG {"namespace": "", "time_ms": 1632837411279, "event_type": "INTERVAL_END", "key": "eval_stop", "value": null, "metadata": {"file": "/workspace/cosmoflow/utils.py", "lineno": 144, "epoch_num": 18}}
+:::MLLOG {"namespace": "", "time_ms": 1632837411279, "event_type": "INTERVAL_END", "key": "epoch_stop", "value": null, "metadata": {"file": "/workspace/cosmoflow/utils.py", "lineno": 144, "epoch_num": 18}}
+:::MLLOG {"namespace": "", "time_ms": 1632837411280, "event_type": "POINT_IN_TIME", "key": "eval_error", "value": 0.12425917343364135, "metadata": {"file": "train.py", "lineno": 232, "epoch_num": 18}}
+:::MLLOG {"namespace": "", "time_ms": 1632837411280, "event_type": "POINT_IN_TIME", "key": "eval_accuracy", "value": -0.12425917343364135, "metadata": {"file": "train.py", "lineno": 232, "epoch_num": 18}}
+:::MLLOG {"namespace": "", "time_ms": 1632837411280, "event_type": "INTERVAL_START", "key": "epoch_start", "value": null, "metadata": {"file": "train.py", "lineno": 215, "epoch_num": 19}}
+:::MLLOG {"namespace": "", "time_ms": 1632837472737, "event_type": "POINT_IN_TIME", "key": "throughput", "value": 8530.915651442188, "metadata": {"file": "train.py", "lineno": 352, "epoch_num": 19}}
+:::MLLOG {"namespace": "", "time_ms": 1632837472738, "event_type": "INTERVAL_START", "key": "eval_start", "value": null, "metadata": {"file": "train.py", "lineno": 360, "epoch_num": 19}}
+:::MLLOG {"namespace": "", "time_ms": 1632837475643, "event_type": "INTERVAL_END", "key": "eval_stop", "value": null, "metadata": {"file": "/workspace/cosmoflow/utils.py", "lineno": 144, "epoch_num": 19}}
+:::MLLOG {"namespace": "", "time_ms": 1632837475643, "event_type": "INTERVAL_END", "key": "epoch_stop", "value": null, "metadata": {"file": "/workspace/cosmoflow/utils.py", "lineno": 144, "epoch_num": 19}}
+:::MLLOG {"namespace": "", "time_ms": 1632837475643, "event_type": "POINT_IN_TIME", "key": "eval_error", "value": 0.12157216646128344, "metadata": {"file": "train.py", "lineno": 232, "epoch_num": 19}}
+:::MLLOG {"namespace": "", "time_ms": 1632837475643, "event_type": "POINT_IN_TIME", "key": "eval_accuracy", "value": -0.12157216646128344, "metadata": {"file": "train.py", "lineno": 232, "epoch_num": 19}}
+:::MLLOG {"namespace": "", "time_ms": 1632837475644, "event_type": "INTERVAL_END", "key": "run_stop", "value": null, "metadata": {"file": "/workspace/cosmoflow/utils.py", "lineno": 144, "status": "success"}}

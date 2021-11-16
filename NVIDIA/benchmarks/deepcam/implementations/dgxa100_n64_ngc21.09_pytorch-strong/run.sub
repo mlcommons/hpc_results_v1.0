@@ -1,0 +1,107 @@
+#!/bin/bash
+#SBATCH -A mlperf
+#SBATCH --job-name mlperf-hpc:deepcam
+set -euxo pipefail
+
+# Vars without defaults
+: "${DGXSYSTEM:?DGXSYSTEM not set}"
+: "${CONT:?CONT not set}"
+
+# Vars with defaults
+: "${NEXP:=1}"
+: "${DATESTAMP:=$(date +'%y%m%d%H%M%S%N')}"
+: "${CLEAR_CACHES:=1}"
+: "${DATADIR:=/lustre/fsw/mlperf/mlperf-hpc/tkurth/deepcam_v0.7/data/All-Hist/numpy}"
+: "${LOGDIR:=./results}"
+: "${API_LOG_DIR:=./api_logs}" # apiLog.sh output dir
+: "${OUTPUT_ROOT:=/scratch/logs}" # temporary output directory before cleanup
+: "${NCCL_ASYNC_ERROR_HANDLING:=0}"
+: "${WIREUP_METHOD:=nccl-slurm}"
+
+# compute number of total ranks
+TOTALGPU=$(( ${SLURM_JOB_NUM_NODES} * ${DGXNGPU} ))
+
+# determine the wireup method
+if [ "${TOTALGPU}" -eq 1 ]; then
+    WIREUP_METHOD="dummy"
+fi
+
+# Other vars
+readonly _seed_override=${SEED:-}
+readonly _logfile_base="${LOGDIR}/slurm_${DATESTAMP}"
+readonly _cont_name=mlperf-hpc-deepcam
+_cont_mounts="${DATADIR}:/data:ro,${LOGDIR}:/results:rw,/raid/scratch:/scratch:rw"
+if [ "${API_LOGGING:-0}" -eq 1 ]; then
+    _cont_mounts="${_cont_mounts},${API_LOG_DIR}:/logs"
+fi
+
+if [ "${SBATCH_NETWORK:-}" == "sharp" ]; then
+    echo "Using SHARP"
+    export SHARP_COLL_LOCK_ON_COMM_INIT=1
+    export SHARP_COLL_NUM_COLL_GROUP_RESOURCE_ALLOC_THRESHOLD=0
+    export SHARP_COLL_ENABLE_SAT=1
+    export NCCL_COLLNET_ENABLE=1
+    export SHARP_COLL_SHARPD_SOCKET_NAME=sharpd_hpcx_2.4.2
+    if [ "${SHARP_DEBUG:-0}" -eq 1 ]; then
+	export SHARP_COLL_LOG_LEVEL=3
+	export NCCL_DEBUG=info
+    fi
+fi
+
+# MLPerf vars
+MLPERF_HOST_OS=$(srun -N1 -n1 bash <<EOF
+		 source /etc/os-release
+		 source /etc/dgx-release || true
+		 echo "\${PRETTY_NAME} / \${DGX_PRETTY_NAME:-???} \${DGX_OTA_VERSION:-\${DGX_SWBUILD_VERSION:-???}}"
+EOF
+)
+export MLPERF_HOST_OS
+
+# Setup directories
+mkdir -p "${LOGDIR}"
+srun --ntasks="${SLURM_JOB_NUM_NODES}" mkdir -p "${LOGDIR}"
+
+# Setup container
+srun --ntasks="${SLURM_JOB_NUM_NODES}" --container-image="${CONT}" --container-name="${_cont_name}" true
+
+# options for staging archives
+if [ "${STAGE_ARCHIVES:-0}" -eq 1 ]; then
+    if [ ! -z ${TRAINING_INSTANCE_SIZE} ]; then
+	TARGPU=${TRAINING_INSTANCE_SIZE}
+    else
+	TARGPU=${TOTALGPU}
+    fi
+    srun --mpi=pmix --ntasks="${TARGPU}" --ntasks-per-node="${DGXNGPU}" \
+	 --container-name="${_cont_name}" --container-mounts="${_cont_mounts},/lustre/fsw/mlperf/mlperf-hpc/tkurth/deepcam_v0.7/data/All-Hist/numpy_archive:/data_archive:rw" \
+	 --container-workdir /workspace \
+	 python /opt/utils/tar_data.py --input_directory="/data" --output_directory="/data_archive"
+    # redirect the data directory
+    DATADIR=/lustre/fsw/mlperf/mlperf-hpc/tkurth/deepcam_v0.7/data/All-Hist/numpy_archive
+    _cont_mounts="${DATADIR}:/data:ro,${LOGDIR}:/results:rw,/raid/scratch:/scratch:rw"
+fi
+
+# Run experiments
+for _experiment_index in $(seq 1 "${NEXP}"); do
+    (
+	echo "Beginning trial ${_experiment_index} of ${NEXP}"
+
+	# Clear caches
+	if [ "${CLEAR_CACHES}" -eq 1 ]; then
+	    srun --ntasks="${SLURM_JOB_NUM_NODES}" bash -c "echo -n 'Clearing cache on ' && hostname && sync && sudo /sbin/sysctl vm.drop_caches=3"
+	fi
+
+	# Set Vars
+	export SEED=${_seed_override:-$(date +%s)}
+	export EXP_ID=${_experiment_index}
+	export DATESTAMP=${DATESTAMP}
+	export WIREUP_METHOD=${WIREUP_METHOD}
+	export NCCL_ASYNC_ERROR_HANDLING=${NCCL_ASYNC_ERROR_HANDLING}
+
+	# Run experiment
+	srun -l --wait=900 --kill-on-bad-exit=0 --mpi=pmix --ntasks="${TOTALGPU}" --ntasks-per-node="${DGXNGPU}" \
+	     --container-name="${_cont_name}" --container-mounts="${_cont_mounts}" \
+	     --container-workdir /workspace \
+	     bash ./run_and_time.sh
+    ) |& tee "${_logfile_base}_${_experiment_index}.out"
+done
+wait

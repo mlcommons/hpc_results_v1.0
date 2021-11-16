@@ -1,0 +1,98 @@
+# http://travis-ci.org/mpi4py/mpi4py
+
+language: python
+python:
+  - 2.7
+  - 3.5
+  - 3.6
+  - 3.7
+  - 3.8
+arch:
+  - amd64
+  - arm64
+  - ppc64le
+
+os: linux
+dist: xenial
+sudo: required
+
+env:
+  global:
+    - HYDRA_LAUNCHER=fork
+    - OMPI_MCA_plm=isolated
+    - OMPI_MCA_rmaps_base_oversubscribe=true
+  matrix:
+    - MPI=mpich
+    - MPI=openmpi
+
+matrix:
+  include:
+    - python: pypy
+      env: MPI=mpich
+    - python: pypy
+      env: MPI=openmpi
+    - python: pypy3
+      env: MPI=mpich
+    - python: pypy3
+      env: MPI=openmpi
+    - python: pypy3.5-6.0
+      env: MPI=mpich
+    - python: pypy3.5-6.0
+      env: MPI=openmpi
+  allow_failures:
+    - python: pypy
+      env: MPI=mpich
+    - python: pypy
+      env: MPI=openmpi
+    - python: pypy3
+      env: MPI=mpich
+    - python: pypy3
+      env: MPI=openmpi
+    - python: pypy3.5-6.0
+      env: MPI=mpich
+    - python: pypy3.5-6.0
+      env: MPI=openmpi
+
+branches:
+  only:
+    - master
+    - maint
+    - ci/all
+    - ci/travis
+
+git:
+  depth: 3
+
+cache:
+  apt: true
+
+addons:
+  apt:
+    update: true
+  homebrew:
+    update: true
+
+before_install:
+  - python -m pip install Cython
+  - python -m pip install numpy
+  - ./conf/ci/travis-ci/install-mpi.sh $MPI
+  - python --version
+  - python -m cython --version
+  - python -c "import numpy;print(numpy.__version__)"
+  - if [[ "$MPI" == "mpich"   ]]; then mpichversion; fi
+  - if [[ "$MPI" == "openmpi" ]]; then ompi_info;    fi
+install:
+  - python -m pip -vvv install .
+
+before_script:
+  - if [[ "$MPI" == "mpich" ]]; then P=2; else P=5; fi
+script:
+  - mpiexec -n 1  python $PWD/test/runtests.py -v
+  - mpiexec -n $P python $PWD/test/runtests.py -v -f -e spawn
+  - mpiexec -n 1  python $PWD/demo/futures/test_futures.py -v
+  - mpiexec -n $P python $PWD/demo/futures/test_futures.py -v
+  - mpiexec -n 1  python -m mpi4py.futures $PWD/demo/futures/test_futures.py -v
+  - mpiexec -n $P python -m mpi4py.futures $PWD/demo/futures/test_futures.py -v
+
+#notifications:
+#  email: false

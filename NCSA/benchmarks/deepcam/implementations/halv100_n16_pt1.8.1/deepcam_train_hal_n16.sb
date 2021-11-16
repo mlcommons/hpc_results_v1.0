@@ -1,0 +1,49 @@
+#!/bin/bash
+
+#SBATCH --job-name="deepcam_n16_000"
+#SBATCH --output="deepcam_n16_000_%j.out"
+#SBATCH --partition=gpu
+#SBATCH --nodes=16
+#SBATCH --ntasks-per-node=4
+#SBATCH --cpus-per-task=40
+#SBATCH --cores-per-socket=20
+#SBATCH --threads-per-core=4
+#SBATCH --sockets-per-node=2
+#SBATCH --mem-per-cpu=1200
+#SBATCH --export=ALL
+#SBATCH --gres=gpu:v100:4
+#SBATCH --time=48:00:00
+#SBATCH --mail-type=ALL
+#SBATCH --reservation=root_16
+
+module load opence
+module list
+
+cd ../deepcam/src/deepCam
+
+# parameters
+data_dir="/home/shared/All-Hist"
+output_dir="./runs/${run_tag}"
+run_tag="production_run_n16_000"
+local_batch_size=2
+
+mpirun -np 64 --allow-run-as-root \
+        python ./train.py \
+       --wireup_method "nccl-openmpi" \
+       --run_tag ${run_tag} \
+       --data_dir_prefix ${data_dir} \
+       --output_dir ${output_dir} \
+       --model_prefix "classifier" \
+       --optimizer "LAMB" \
+       --start_lr 0.0055 \
+       --lr_schedule type="multistep",milestones="800",decay_rate="0.1" \
+       --lr_warmup_steps 400 \
+       --lr_warmup_factor 1. \
+       --weight_decay 1e-2 \
+       --logging_frequency 10 \
+       --save_frequency 0 \
+       --max_epochs 200 \
+       --max_inter_threads 4 \
+       --seed $(date +%s) \
+       --batchnorm_group_size 1 \
+       --local_batch_size ${local_batch_size}

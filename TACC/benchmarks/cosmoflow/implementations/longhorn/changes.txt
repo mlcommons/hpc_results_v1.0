@@ -1,0 +1,34 @@
+diff --git a/cosmoflow/data/cosmo.py b/cosmoflow/data/cosmo.py
+index 6230310..e557e38 100644
+--- a/cosmoflow/data/cosmo.py
++++ b/cosmoflow/data/cosmo.py
+@@ -79,7 +79,7 @@ def construct_dataset(file_dir, n_samples, batch_size, n_epochs,
+                       sample_shape, samples_per_file=1, n_file_sets=1,
+                       shard=0, n_shards=1, apply_log=True, compression=None,
+                       randomize_files=False, shuffle=False, shuffle_buffer_size=0,
+-                      n_parallel_reads=tf.data.AUTOTUNE, prefetch=tf.data.AUTOTUNE):
++                      n_parallel_reads=tf.data.experimental.AUTOTUNE, prefetch=tf.data.experimental.AUTOTUNE):
+     """This function takes a folder with files and builds the TF dataset.
+
+     It ensures that the requested sample counts are divisible by files,
+diff --git a/cosmoflow/logs/.gitignore b/cosmoflow/logs/.gitignore
+deleted file mode 100644
+index f47cb20..0000000
+--- a/cosmoflow/logs/.gitignore
++++ /dev/null
+@@ -1 +0,0 @@
+-*.out
+diff --git a/cosmoflow/train.py b/cosmoflow/train.py
+index 1d6979b..83e73ac 100644
+--- a/cosmoflow/train.py
++++ b/cosmoflow/train.py
+@@ -299,7 +299,7 @@ def main():
+                             **config['optimizer'])
+         # Compile the model
+         model.compile(optimizer=opt, loss=train_config['loss'],
+-                      metrics=train_config['metrics'])
++                      metrics=train_config['metrics'], experimental_run_tf_function=False)
+
+     if dist.rank == 0:
+         model.summary()
+

@@ -1,0 +1,685 @@
+LOOK: deepcam ['NVIDIA/results/dgxa100_n64_ngc21.09_pytorch/strong/deepcam/result_5.txt', 'NVIDIA/results/dgxa100_n64_ngc21.09_pytorch/strong/deepcam/result_4.txt', 'NVIDIA/results/dgxa100_n64_ngc21.09_pytorch/strong/deepcam/result_3.txt', 'NVIDIA/results/dgxa100_n64_ngc21.09_pytorch/strong/deepcam/result_2.txt', 'NVIDIA/results/dgxa100_n64_ngc21.09_pytorch/strong/deepcam/result_1.txt']
+------------------------------
+System dgxa100_n64_ngc21.09_pytorch
+Benchmark deepcam
+------------------------------
+Run 1
+------------------------------
+Run 2
+------------------------------
+Run 3
+------------------------------
+Run 4
+------------------------------
+Run 5
+------------------------------
+LOOK: deepcam ['NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_172.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_36.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_235.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_231.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_47.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_63.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_215.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_23.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_67.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_125.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_66.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_56.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_76.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_221.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_160.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_34.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_85.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_98.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_14.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_244.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_20.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_49.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_19.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_217.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_100.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_211.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_165.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_101.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_51.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_32.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_15.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_239.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_116.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_123.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_84.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_250.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_106.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_179.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_133.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_228.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_146.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_38.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_157.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_74.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_102.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_50.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_127.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_42.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_105.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_230.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_52.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_194.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_138.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_183.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_140.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_124.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_205.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_132.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_110.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_154.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_209.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_79.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_131.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_219.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_5.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_104.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_135.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_136.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_92.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_89.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_175.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_148.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_6.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_68.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_233.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_142.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_216.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_256.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_220.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_193.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_240.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_224.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_236.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_97.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_237.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_180.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_75.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_45.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_40.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_112.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_246.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_153.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_29.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_60.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_185.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_64.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_54.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_117.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_121.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_166.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_28.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_191.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_167.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_158.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_10.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_227.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_151.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_202.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_155.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_182.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_176.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_13.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_12.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_163.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_17.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_90.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_33.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_91.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_11.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_118.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_94.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_156.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_139.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_254.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_58.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_108.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_37.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_129.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_73.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_249.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_107.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_83.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_247.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_147.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_196.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_159.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_25.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_4.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_188.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_22.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_8.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_232.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_88.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_9.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_181.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_248.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_200.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_189.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_141.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_96.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_21.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_86.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_46.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_177.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_174.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_173.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_213.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_39.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_61.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_128.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_171.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_82.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_226.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_238.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_222.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_122.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_55.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_184.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_77.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_170.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_198.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_81.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_27.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_187.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_234.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_30.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_80.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_41.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_3.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_143.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_114.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_71.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_190.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_162.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_201.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_150.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_95.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_192.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_164.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_69.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_245.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_134.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_144.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_242.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_111.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_130.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_113.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_99.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_210.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_65.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_24.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_120.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_126.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_225.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_115.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_241.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_2.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_203.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_7.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_57.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_229.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_207.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_161.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_214.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_195.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_78.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_31.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_218.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_199.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_93.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_252.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_212.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_243.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_253.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_72.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_137.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_70.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_178.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_119.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_149.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_255.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_223.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_251.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_62.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_43.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_44.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_208.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_206.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_87.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_59.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_168.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_35.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_18.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_145.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_26.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_1.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_103.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_204.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_197.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_169.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_48.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_53.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_16.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_152.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_186.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_pytorch/weak/deepcam/result_109.txt']
+------------------------------
+System dgxa100_n512_ngc21.09_pytorch
+Benchmark deepcam
+------------------------------
+Run 1
+------------------------------
+Run 10
+------------------------------
+Run 100
+------------------------------
+Run 101
+------------------------------
+Run 102
+------------------------------
+Run 103
+------------------------------
+Run 104
+------------------------------
+Run 105
+------------------------------
+Run 106
+------------------------------
+Run 107
+------------------------------
+Run 108
+------------------------------
+Run 109
+------------------------------
+Run 11
+------------------------------
+Run 110
+------------------------------
+Run 111
+------------------------------
+Run 112
+------------------------------
+Run 113
+------------------------------
+Run 114
+------------------------------
+Run 115
+------------------------------
+Run 116
+------------------------------
+Run 117
+------------------------------
+Run 118
+------------------------------
+Run 119
+------------------------------
+Run 12
+------------------------------
+Run 120
+------------------------------
+Run 121
+------------------------------
+Run 122
+------------------------------
+Run 123
+------------------------------
+Run 124
+------------------------------
+Run 125
+------------------------------
+Run 126
+------------------------------
+Run 127
+------------------------------
+Run 128
+------------------------------
+Run 129
+------------------------------
+Run 13
+------------------------------
+Run 130
+------------------------------
+Run 131
+------------------------------
+Run 132
+------------------------------
+Run 133
+------------------------------
+Run 134
+------------------------------
+Run 135
+------------------------------
+Run 136
+------------------------------
+Run 137
+------------------------------
+Run 138
+------------------------------
+Run 139
+------------------------------
+Run 14
+------------------------------
+Run 140
+------------------------------
+Run 141
+------------------------------
+Run 142
+------------------------------
+Run 143
+------------------------------
+Run 144
+------------------------------
+Run 145
+------------------------------
+Run 146
+------------------------------
+Run 147
+------------------------------
+Run 148
+------------------------------
+Run 149
+------------------------------
+Run 15
+------------------------------
+Run 150
+------------------------------
+Run 151
+------------------------------
+Run 152
+------------------------------
+Run 153
+------------------------------
+Run 154
+------------------------------
+Run 155
+------------------------------
+Run 156
+------------------------------
+Run 157
+------------------------------
+Run 158
+------------------------------
+Run 159
+------------------------------
+Run 16
+------------------------------
+Run 160
+------------------------------
+Run 161
+------------------------------
+Run 162
+------------------------------
+Run 163
+------------------------------
+Run 164
+------------------------------
+Run 165
+------------------------------
+Run 166
+------------------------------
+Run 167
+------------------------------
+Run 168
+------------------------------
+Run 169
+------------------------------
+Run 17
+------------------------------
+Run 170
+------------------------------
+Run 171
+------------------------------
+Run 172
+------------------------------
+Run 173
+------------------------------
+Run 174
+------------------------------
+Run 175
+------------------------------
+Run 176
+------------------------------
+Run 177
+------------------------------
+Run 178
+------------------------------
+Run 179
+------------------------------
+Run 18
+------------------------------
+Run 180
+------------------------------
+Run 181
+------------------------------
+Run 182
+------------------------------
+Run 183
+------------------------------
+Run 184
+------------------------------
+Run 185
+------------------------------
+Run 186
+------------------------------
+Run 187
+------------------------------
+Run 188
+------------------------------
+Run 189
+------------------------------
+Run 19
+------------------------------
+Run 190
+------------------------------
+Run 191
+------------------------------
+Run 192
+------------------------------
+Run 193
+------------------------------
+Run 194
+------------------------------
+Run 195
+------------------------------
+Run 196
+------------------------------
+Run 197
+------------------------------
+Run 198
+------------------------------
+Run 199
+------------------------------
+Run 2
+------------------------------
+Run 20
+------------------------------
+Run 200
+------------------------------
+Run 201
+------------------------------
+Run 202
+------------------------------
+Run 203
+------------------------------
+Run 204
+------------------------------
+Run 205
+------------------------------
+Run 206
+------------------------------
+Run 207
+------------------------------
+Run 208
+------------------------------
+Run 209
+------------------------------
+Run 21
+------------------------------
+Run 210
+------------------------------
+Run 211
+------------------------------
+Run 212
+------------------------------
+Run 213
+------------------------------
+Run 214
+------------------------------
+Run 215
+------------------------------
+Run 216
+------------------------------
+Run 217
+------------------------------
+Run 218
+------------------------------
+Run 219
+------------------------------
+Run 22
+------------------------------
+Run 220
+------------------------------
+Run 221
+------------------------------
+Run 222
+------------------------------
+Run 223
+------------------------------
+Run 224
+------------------------------
+Run 225
+------------------------------
+Run 226
+------------------------------
+Run 227
+------------------------------
+Run 228
+------------------------------
+Run 229
+------------------------------
+Run 23
+------------------------------
+Run 230
+------------------------------
+Run 231
+------------------------------
+Run 232
+------------------------------
+Run 233
+------------------------------
+Run 234
+------------------------------
+Run 235
+------------------------------
+Run 236
+------------------------------
+Run 237
+------------------------------
+Run 238
+------------------------------
+Run 239
+------------------------------
+Run 24
+------------------------------
+Run 240
+------------------------------
+Run 241
+------------------------------
+Run 242
+------------------------------
+Run 243
+------------------------------
+Run 244
+------------------------------
+Run 245
+------------------------------
+Run 246
+------------------------------
+Run 247
+------------------------------
+Run 248
+------------------------------
+Run 249
+------------------------------
+Run 25
+------------------------------
+Run 250
+------------------------------
+Run 251
+------------------------------
+Run 252
+------------------------------
+Run 253
+------------------------------
+Run 254
+------------------------------
+Run 255
+------------------------------
+Run 256
+------------------------------
+Run 26
+------------------------------
+Run 27
+------------------------------
+Run 28
+------------------------------
+Run 29
+------------------------------
+Run 3
+------------------------------
+Run 30
+------------------------------
+Run 31
+------------------------------
+Run 32
+------------------------------
+Run 33
+------------------------------
+Run 34
+------------------------------
+Run 35
+------------------------------
+Run 36
+------------------------------
+Run 37
+------------------------------
+Run 38
+------------------------------
+Run 39
+------------------------------
+Run 4
+------------------------------
+Run 40
+------------------------------
+Run 41
+------------------------------
+Run 42
+------------------------------
+Run 43
+------------------------------
+Run 44
+------------------------------
+Run 45
+------------------------------
+Run 46
+------------------------------
+Run 47
+------------------------------
+Run 48
+------------------------------
+Run 49
+------------------------------
+Run 5
+------------------------------
+Run 50
+------------------------------
+Run 51
+------------------------------
+Run 52
+------------------------------
+Run 53
+------------------------------
+Run 54
+------------------------------
+Run 55
+------------------------------
+Run 56
+------------------------------
+Run 57
+------------------------------
+Run 58
+------------------------------
+Run 59
+------------------------------
+Run 6
+------------------------------
+Run 60
+------------------------------
+Run 61
+------------------------------
+Run 62
+------------------------------
+Run 63
+------------------------------
+Run 64
+------------------------------
+Run 65
+------------------------------
+Run 66
+------------------------------
+Run 67
+------------------------------
+Run 68
+------------------------------
+Run 69
+------------------------------
+Run 7
+------------------------------
+Run 70
+------------------------------
+Run 71
+------------------------------
+Run 72
+------------------------------
+Run 73
+------------------------------
+Run 74
+------------------------------
+Run 75
+------------------------------
+Run 76
+------------------------------
+Run 77
+------------------------------
+Run 78
+------------------------------
+Run 79
+------------------------------
+Run 8
+------------------------------
+Run 80
+------------------------------
+Run 81
+------------------------------
+Run 82
+------------------------------
+Run 83
+------------------------------
+Run 84
+------------------------------
+Run 85
+------------------------------
+Run 86
+------------------------------
+Run 87
+------------------------------
+Run 88
+------------------------------
+Run 89
+------------------------------
+Run 9
+------------------------------
+Run 90
+------------------------------
+Run 91
+------------------------------
+Run 92
+------------------------------
+Run 93
+------------------------------
+Run 94
+------------------------------
+Run 95
+------------------------------
+Run 96
+------------------------------
+Run 97
+------------------------------
+Run 98
+------------------------------
+Run 99
+------------------------------
+LOOK: cosmoflow ['NVIDIA/results/dgxa100_n128_ngc21.09_mxnet/strong/cosmoflow/result_5.txt', 'NVIDIA/results/dgxa100_n128_ngc21.09_mxnet/strong/cosmoflow/result_6.txt', 'NVIDIA/results/dgxa100_n128_ngc21.09_mxnet/strong/cosmoflow/result_10.txt', 'NVIDIA/results/dgxa100_n128_ngc21.09_mxnet/strong/cosmoflow/result_4.txt', 'NVIDIA/results/dgxa100_n128_ngc21.09_mxnet/strong/cosmoflow/result_8.txt', 'NVIDIA/results/dgxa100_n128_ngc21.09_mxnet/strong/cosmoflow/result_9.txt', 'NVIDIA/results/dgxa100_n128_ngc21.09_mxnet/strong/cosmoflow/result_3.txt', 'NVIDIA/results/dgxa100_n128_ngc21.09_mxnet/strong/cosmoflow/result_2.txt', 'NVIDIA/results/dgxa100_n128_ngc21.09_mxnet/strong/cosmoflow/result_7.txt', 'NVIDIA/results/dgxa100_n128_ngc21.09_mxnet/strong/cosmoflow/result_1.txt']
+------------------------------
+System dgxa100_n128_ngc21.09_mxnet
+Benchmark cosmoflow
+------------------------------
+Run 1
+------------------------------
+Run 10
+------------------------------
+Run 2
+------------------------------
+Run 3
+------------------------------
+Run 4
+------------------------------
+Run 5
+------------------------------
+Run 6
+------------------------------
+Run 7
+------------------------------
+Run 8
+------------------------------
+Run 9
+RCP test failed but allowed to proceed with RCP bypass
+------------------------------
+LOOK: deepcam ['NVIDIA/results/dgxa100_n256_ngc21.09_pytorch/strong/deepcam/result_5.txt', 'NVIDIA/results/dgxa100_n256_ngc21.09_pytorch/strong/deepcam/result_4.txt', 'NVIDIA/results/dgxa100_n256_ngc21.09_pytorch/strong/deepcam/result_3.txt', 'NVIDIA/results/dgxa100_n256_ngc21.09_pytorch/strong/deepcam/result_2.txt', 'NVIDIA/results/dgxa100_n256_ngc21.09_pytorch/strong/deepcam/result_1.txt']
+------------------------------
+System dgxa100_n256_ngc21.09_pytorch
+Benchmark deepcam
+------------------------------
+Run 1
+------------------------------
+Run 2
+------------------------------
+Run 3
+------------------------------
+Run 4
+------------------------------
+Run 5
+------------------------------
+LOOK: cosmoflow ['NVIDIA/results/dgxa100_n16_ngc21.09_mxnet/strong/cosmoflow/result_5.txt', 'NVIDIA/results/dgxa100_n16_ngc21.09_mxnet/strong/cosmoflow/result_6.txt', 'NVIDIA/results/dgxa100_n16_ngc21.09_mxnet/strong/cosmoflow/result_10.txt', 'NVIDIA/results/dgxa100_n16_ngc21.09_mxnet/strong/cosmoflow/result_4.txt', 'NVIDIA/results/dgxa100_n16_ngc21.09_mxnet/strong/cosmoflow/result_8.txt', 'NVIDIA/results/dgxa100_n16_ngc21.09_mxnet/strong/cosmoflow/result_9.txt', 'NVIDIA/results/dgxa100_n16_ngc21.09_mxnet/strong/cosmoflow/result_3.txt', 'NVIDIA/results/dgxa100_n16_ngc21.09_mxnet/strong/cosmoflow/result_2.txt', 'NVIDIA/results/dgxa100_n16_ngc21.09_mxnet/strong/cosmoflow/result_7.txt', 'NVIDIA/results/dgxa100_n16_ngc21.09_mxnet/strong/cosmoflow/result_1.txt']
+------------------------------
+System dgxa100_n16_ngc21.09_mxnet
+Benchmark cosmoflow
+------------------------------
+Run 1
+------------------------------
+Run 10
+------------------------------
+Run 2
+------------------------------
+Run 3
+------------------------------
+Run 4
+------------------------------
+Run 5
+------------------------------
+Run 6
+------------------------------
+Run 7
+------------------------------
+Run 8
+------------------------------
+Run 9
+------------------------------
+LOOK: cosmoflow ['NVIDIA/results/dgxa100_n512_ngc21.09_mxnet/weak/cosmoflow/result_23.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_mxnet/weak/cosmoflow/result_14.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_mxnet/weak/cosmoflow/result_20.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_mxnet/weak/cosmoflow/result_19.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_mxnet/weak/cosmoflow/result_32.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_mxnet/weak/cosmoflow/result_15.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_mxnet/weak/cosmoflow/result_5.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_mxnet/weak/cosmoflow/result_6.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_mxnet/weak/cosmoflow/result_29.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_mxnet/weak/cosmoflow/result_28.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_mxnet/weak/cosmoflow/result_10.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_mxnet/weak/cosmoflow/result_13.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_mxnet/weak/cosmoflow/result_12.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_mxnet/weak/cosmoflow/result_17.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_mxnet/weak/cosmoflow/result_11.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_mxnet/weak/cosmoflow/result_25.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_mxnet/weak/cosmoflow/result_4.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_mxnet/weak/cosmoflow/result_22.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_mxnet/weak/cosmoflow/result_8.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_mxnet/weak/cosmoflow/result_9.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_mxnet/weak/cosmoflow/result_21.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_mxnet/weak/cosmoflow/result_27.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_mxnet/weak/cosmoflow/result_30.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_mxnet/weak/cosmoflow/result_3.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_mxnet/weak/cosmoflow/result_24.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_mxnet/weak/cosmoflow/result_2.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_mxnet/weak/cosmoflow/result_7.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_mxnet/weak/cosmoflow/result_31.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_mxnet/weak/cosmoflow/result_18.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_mxnet/weak/cosmoflow/result_26.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_mxnet/weak/cosmoflow/result_1.txt', 'NVIDIA/results/dgxa100_n512_ngc21.09_mxnet/weak/cosmoflow/result_16.txt']
+------------------------------
+System dgxa100_n512_ngc21.09_mxnet
+Benchmark cosmoflow
+------------------------------
+Run 1
+------------------------------
+Run 10
+------------------------------
+Run 11
+------------------------------
+Run 12
+------------------------------
+Run 13
+------------------------------
+Run 14
+------------------------------
+Run 15
+------------------------------
+Run 16
+------------------------------
+Run 17
+------------------------------
+Run 18
+------------------------------
+Run 19
+------------------------------
+Run 2
+------------------------------
+Run 20
+------------------------------
+Run 21
+------------------------------
+Run 22
+------------------------------
+Run 23
+------------------------------
+Run 24
+------------------------------
+Run 25
+------------------------------
+Run 26
+------------------------------
+Run 27
+------------------------------
+Run 28
+------------------------------
+Run 29
+------------------------------
+Run 3
+------------------------------
+Run 30
+------------------------------
+Run 31
+------------------------------
+Run 32
+------------------------------
+Run 4
+------------------------------
+Run 5
+------------------------------
+Run 6
+------------------------------
+Run 7
+------------------------------
+Run 8
+------------------------------
+Run 9
+------------------------------
+SUCCESS
+Table CSV prefix: NVIDIA,dgxa100_n256_ngc21.09_pytorch,AMD EPYC 7742,64,NVIDIA A100-SXM4-80GB (400W),8,PyTorch NVIDIA Release 21.09,
+Table CSV postfix: ,https://github.com/mlperf/hpc_results_v1.0.0/blob/master/NVIDIA/systems/dgxa100_n256_ngc21.09_pytorch.json,https://github.com/mlperf/hpc_results_v1.0.0/blob/master/NVIDIA/benchmarks,
+SUCCESS
+Table CSV prefix: NVIDIA,dgxa100_n512_ngc21.09_pytorch,AMD EPYC 7742,64,NVIDIA A100-SXM4-80GB (400W),8,PyTorch NVIDIA Release 21.09,
+Table CSV postfix: ,https://github.com/mlperf/hpc_results_v1.0.0/blob/master/NVIDIA/systems/dgxa100_n512_ngc21.09_pytorch.json,https://github.com/mlperf/hpc_results_v1.0.0/blob/master/NVIDIA/benchmarks,
+SUCCESS
+Table CSV prefix: NVIDIA,dgxa100_n64_ngc21.09_pytorch,AMD EPYC 7742,64,NVIDIA A100-SXM4-80GB (400W),8,PyTorch NVIDIA Release 21.09,
+Table CSV postfix: ,https://github.com/mlperf/hpc_results_v1.0.0/blob/master/NVIDIA/systems/dgxa100_n64_ngc21.09_pytorch.json,https://github.com/mlperf/hpc_results_v1.0.0/blob/master/NVIDIA/benchmarks,
+SUCCESS
+Table CSV prefix: NVIDIA,dgxa100_n16_ngc21.09_mxnet,AMD EPYC 7742,64,NVIDIA A100-SXM4-80GB (400W),8,MxNet NVIDIA Release 21.09,
+Table CSV postfix: ,https://github.com/mlperf/hpc_results_v1.0.0/blob/master/NVIDIA/systems/dgxa100_n16_ngc21.09_mxnet.json,https://github.com/mlperf/hpc_results_v1.0.0/blob/master/NVIDIA/benchmarks,
+SUCCESS
+Table CSV prefix: NVIDIA,dgxa100_n128_ngc21.09_mxnet,AMD EPYC 7742,64,NVIDIA A100-SXM4-80GB (400W),8,MxNet NVIDIA Release 21.09,
+Table CSV postfix: ,https://github.com/mlperf/hpc_results_v1.0.0/blob/master/NVIDIA/systems/dgxa100_n128_ngc21.09_mxnet.json,https://github.com/mlperf/hpc_results_v1.0.0/blob/master/NVIDIA/benchmarks,
+SUCCESS
+Table CSV prefix: NVIDIA,dgxa100_n512_ngc21.09_mxnet,AMD EPYC 7742,64,NVIDIA A100-SXM4-80GB (400W),8,MxNet NVIDIA Release 21.09,
+Table CSV postfix: ,https://github.com/mlperf/hpc_results_v1.0.0/blob/master/NVIDIA/systems/dgxa100_n512_ngc21.09_mxnet.json,https://github.com/mlperf/hpc_results_v1.0.0/blob/master/NVIDIA/benchmarks,

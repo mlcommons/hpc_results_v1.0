@@ -1,0 +1,74 @@
+#!/bin/bash
+#SBATCH --job-name mlperf-hpc:cosmoflow_ref
+set -euxo pipefail
+
+
+# Vars without defaults
+: "${DGXSYSTEM:?DGXSYSTEM not set}"
+: "${CONT:?CONT not set}"
+
+# Vars with defaults
+: "${NEXP:=1}"
+: "${DATESTAMP:=$(date +'%y%m%d%H%M%S%N')}"
+: "${CLEAR_CACHES:=1}"
+: "${DATADIR:=/lustre/fsw/mlperf/mlperf-hpc/tkurth/cosmoflow_v0.7/data/cosmoUniverse_2019_05_4parE_tf_v2_numpy}"
+: "${LOGDIR:=./results}"
+: "${COPY_DATASET:=}"
+: "${API_LOG_DIR:=./api_logs}" # apiLog.sh output dir
+: "${STAGING_DIR:=/tmp/}"
+
+echo $COPY_DATASET
+
+if [ ! -z $COPY_DATASET ]; then
+  readonly copy_datadir=$COPY_DATASET
+  srun --ntasks-per-node=1 mkdir -p "${DATADIR}"
+  srun --ntasks-per-node=1 ${CODEDIR}/copy-data.sh "${copy_datadir}" "${DATADIR}"
+  srun --ntasks-per-node=1 bash -c "ls ${DATADIR}"
+fi
+
+# Other vars
+readonly _seed_override=${SEED:-}
+readonly _logfile_base="${LOGDIR}/${DATESTAMP}"
+readonly _cont_name=mlperf-hpc-cosmoflow
+_cont_mounts="${DATADIR}:/data:ro,${LOGDIR}:/results,${STAGING_DIR}:/staging_area"
+if [ "${API_LOGGING:-}" -eq 1 ]; then
+    _cont_mounts="${_cont_mounts},${API_LOG_DIR}:/logs"
+fi
+
+# MLPerf vars
+MLPERF_HOST_OS=$(srun -N1 -n1 bash <<EOF
+    source /etc/os-release
+    source /etc/dgx-release || true
+    echo "\${PRETTY_NAME} / \${DGX_PRETTY_NAME:-???} \${DGX_OTA_VERSION:-\${DGX_SWBUILD_VERSION:-???}}"
+EOF
+)
+export MLPERF_HOST_OS
+export DATESTAMP
+
+# Setup directories
+mkdir -p "${LOGDIR}"
+srun --ntasks="${SLURM_JOB_NUM_NODES}" mkdir -p "${LOGDIR}"
+
+# Setup container
+srun --ntasks="${SLURM_JOB_NUM_NODES}" --container-image="${CONT}" --container-name="${_cont_name}" true
+
+# Run experiments
+for _experiment_index in $(seq 1 "${NEXP}"); do
+    (
+        echo "Beginning trial ${_experiment_index} of ${NEXP}"
+
+        # Clear caches
+        if [ "${CLEAR_CACHES}" -eq 1 ]; then
+            srun --ntasks="${SLURM_JOB_NUM_NODES}" bash -c "echo -n 'Clearing cache on ' && hostname && sync && sudo /sbin/sysctl vm.drop_caches=3"
+        fi
+
+        # Run experiment
+        export SEED=${_seed_override:-$RANDOM}
+        export EXPERIMENT_ID=$_experiment_index
+	    srun --kill-on-bad-exit=0 --mpi=pmix --ntasks="$(( SLURM_JOB_NUM_NODES * DGXNGPU ))" --ntasks-per-node="${DGXNGPU}" \
+            --container-name="${_cont_name}" --container-mounts="${_cont_mounts}" \
+	        bash ./run_and_time.sh
+
+
+    )
+done
