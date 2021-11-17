@@ -1,0 +1,138 @@
+= MLPerf HPC Training v0.7 Results Discussion
+
+
+The following descriptions were provided by the submitting organizations as a supplement to help the public understand the submissions and results. The statements do not reflect the opinions or views of MLCommons. 
+
+== Argonne National Laboratory (ANL)
+
+The Argonne Leadership Computing Facility (ALCF) [1], a U.S. Department of Energy (DOE) Office of Science User Facility located at Argonne National Laboratory, enables breakthroughs in science and engineering by providing supercomputing resources and expertise to the research community. The Theta supercomputer [2] is operated and maintained by the ALCF. ThetaGPU, a 3.9 Petaflops system has 24 Nvidia DGX3 A100 nodes with eight (8) NVIDIA A100 Tensor Core GPUs and two (2) AMD Rome CPUs per node that provide 320 gigabytes (7680 GB aggregately) of GPU memory for training artificial intelligence (AI) datasets, while also enabling GPU-specific and enhanced high-performance computing (HPC) applications for modeling and simulation.
+ 
+For the 2021 MLPerf HPC v1.0, we submitted strong scaling results for DeepCam and OpenCatalyst training benchmarks in the closed division. These benchmarks were run on 16 NVIDIA DGX3 nodes (128 A100 GPUs) of Theta. We made minor modifications to the DeepCam and OpenCatalyst submissions in order to correctly initialize MPI communication for distributed training. After confirming that all of the models were working as expected, we ran preliminary tests to verify that our workflows would be compliant with the MLPerf HPC requirements (logging, system information, etc.). The available documentation helped us understand the impact of the various hyperparameters on the model training performance. We started with the default parameters and tuned the hyperparameters to reduce the overall training cost. We employed data staging on the node-local storage NVMe to accelerate the I/O.
+ 
+The insights gained from these runs will help us improve our efforts to optimize large scientific machine learning applications on the upcoming supercomputers, Polaris and Aurora, and thereby glean insights faster.
+
+[1] https://www.alcf.anl.gov/
+
+[2] https://www.alcf.anl.gov/alcf-resources/theta
+
+
+== Swiss National Supercomputing Centre
+
+The Swiss National Supercomputing Centre (CSCS) participated in MLPerf HPC v1.0 with the Open Catalyst and DeepCAM benchmarks on our flagship system, Piz Daint.
+
+Our focus in this round was on recent trends in scientific deep learning within the atmospheric modelling and atomistic simulation communities, and these two benchmarks represent well the growing usage of data from physical simulations for large scale deep learning in these domains.
+
+Managing the data processing requirements of large scale climate simulations is a challenge of the EXCLAIM program [1]. Segmentation tasks such as the one solved by DeepCAM arise naturally when compressing the output of global weather simulations with regional detail resolution for storage.
+
+In our submissions to DeepCAM, we improved the code for higher performance on our distributed file system. In particular, on 128 GPUs, where the dataset does not fit in RAM, prefetching the data before using it on the GPU allowed us to guarantee 98% GPU utilization on average. To sustain this performance up to 1,024 GPUs, we added a caching mechanism in PyTorch that makes effective use of the much larger RAM capacity. Furthermore, we found that performance at this scale is highly sensitive to tuning communication - in particular a tree-based algorithm and sufficient GPU resources in NCCL - which is consistent with last year’s finding on fine-grained communication in CosmoFlow.
+
+The purpose of OpenCatalyst, which we ran on 256 GPUs, is highly aligned with our PASC [2] project “Machine learning for materials and molecules: toward the exascale” [3], which investigates methods for high fidelity molecular dynamics simulations with potentials that accurately reproduce expensive electronic structure calculations using ML techniques.
+
+Together with last year’s results on CosmoFlow, these submissions complete the coverage of the full MLPerf HPC benchmark suite on Piz Daint and will serve as a baseline for the newly upcoming system, Alps.
+
+[1] https://www.cscs.ch/science/earth-env-science/2021/new-high-resolution-models-merge-weather-and-climate/
+
+[2] https://www.pasc-ch.org/
+
+[3] https://www.pasc-ch.org/projects/2021-2024/machine-learning-for-materials-and-molecules-toward-the-exascale/
+
+
+== Fujitsu + RIKEN
+
+RIKEN and Fujitsu jointly developed the world’s top-level supercomputer—the supercomputer Fugaku—capable of realizing high effective performance for a broad range of application software, and started its official operation on March 9, 2021 [1]. RIKEN and Fujitsu submitted CosmoFlow results to closed division using 512 nodes for strong scaling and 81,536 nodes (=128 nodes×637 model instances) for weak scaling. 
+
+For both weak and strong scaling, LLIO (Lightweight Layered IO Accelerator) was used to cache library and program files from FEFS (Fujitsu Exabyte File System) storage. We developed customized TensorFlow and optimized oneAPI Deep Neural Network Library (oneDNN) as the backend [2]. The oneDNN uses JIT assembler Xbyak_aarch64 to exploit the performance of A64FX.
+
+For weak scaling, since the job scheduler cannot launch a large number of instances immediately, inter-instance synchronization across jobs was added to align start times among instances. Moreover, to avoid excessive access to the FEFS from all instances, the dataset is staged to node local memory using a MPI program that only the first instance reads the dataset from FEFS and broadcasts it to the other instances. We actually ran 648 instances (82,944 nodes) but submitted 637 instance results of them. The pruned instances consist of 1 instance that hung during training, 6 instances that used the same seed value as others unintentionally, and 4 instances that took particularly long time.
+
+For strong scaling, we used reformatted uncompressed TFRecord dataset to improve training throughput. The reference dataset is compressed with gzip and needs decompression at each training step. Since the number of nodes increases from weak scaling and the amount of staging data per node decreases, the uncompressed dataset could be used.
+
+In this round, the performance of the Fugaku half-system with more than 80,000 nodes can be evaluated using the new weak scaling metric.
+
+[1] https://www.fujitsu.com/global/about/innovation/fugaku/
+
+[2] https://github.com/fujitsu
+
+
+== Helmholtz AI (JSC - FZJ, SCC - KIT)
+
+In the Helmholtz AI platform, Germany's largest research centers have teamed up to bring cutting-edge AI methods to scientists from other fields. With this in mind, researchers and Helmholtz AI members from the Jülich Supercomputing Centre (JSC) at Forschungszentrum Jülich and the Steinbuch Centre for Computing (SCC) at Karlsruhe Institute of Technology have jointly submitted their results for the MLPerf™ HPC benchmarking suite. We successfully executed large-scale training runs of the CosmoFlow and DeepCAM applications with up to 3072 NVIDIA A100 GPUs on the JUWELS supercomputer at JSC and the HoreKa supercomputer at SCC.
+
+While striving for performance, it is vital to balance the environmental costs of such large-scale measurements. With JUWELS and HoreKa ranking among the top 15 on the worldwide Green500 list of energy-efficient supercomputers, the high performance computing resources in Helmholtz AI are both computationally and energy efficient. Not only have we used these benchmarks to better understand our current systems in preparation for improved future systems but also for testing tools to inform users of the carbon footprint of each individual computing job.
+
+An important step to maximizing the performance was using an optimized HDF5 file format for the dataset. With this, it was possible to get the maximum data loading performance. This was a result of the Helmholtz AI team jointly analyzing the execution performance and implementing a solution that works optimally on both supercomputers. The joint effort to submit competitive results for the MLPerf™ HPC benchmarking suite has been another important step towards democratizing AI for all Helmholtz researchers.
+
+
+== Lawrence Berkeley National Laboratory (LBNL)
+
+The MLPerf HPC v1.0 benchmarks represent the growing scientific AI computational workload at DOE HPC facilities like NERSC. The applications push on HPC system capabilities for compute, storage, and network, making the benchmark suite a valuable tool for assessing and optimizing system performance.
+
+For LBNL, this round featured the debut of Perlmutter Phase 1 at NERSC. Perlmutter Phase 1 has demonstrated itself as a world class AI supercomputer, with leading strong-scaling performance on OpenCatalyst, DeepCAM and CosmoFlow. Additionally, we demonstrated excellent scalability, taking advantage of 5,120 GPUs for the weak-scaling benchmark and metric.
+
+Perlmutter, an HPE Cray EX supercomputer, is designed to meet the emerging simulation, data analytics, and AI requirements of the scientific community. The Phase I system, which debuted at the #5 Top500 spot in June 2021, features more than 6,000 NVIDIA A100 GPUs, an all-flash Lustre filesystem, and a Cray Slingshot network.
+
+LBNL submitted results for all three benchmarks on Perlmutter Phase 1 in the closed division:
+
+* CosmoFlow and DeepCAM strong-scaling results on 2,048 GPUs
+* CosmoFlow and DeepCAM weak-scaling results on 5,120 GPUs, both run with 10 concurrent model-training instances of 512 GPUs each
+* An OpenCatalyst strong-scaling result on 512 GPUs.
+
+The submissions utilized various features and optimizations, including:
+
+* DALI for accelerating the data pipelines in CosmoFlow and DeepCAM
+* Fast data staging from all-flash shared filesystem into on-node DRAM
+* PyTorch JIT compilation for DeepCAM and OpenCatalyst
+* CUDA graphs for CosmoFlow and DeepCAM
+* Load-balancing variable-sized samples in OpenCatalyst
+* Shifter containers for all benchmarks based on NGC PyTorch and MXNet releases.
+
+
+== National Center for Supercomputing Applications (NCSA)
+
+The National Center for Supercomputing Applications (NCSA) is a hub of interdisciplinary research and digital scholarship where University of Illinois faculty, staff, students, and collaborators from around the world work together to address research grand challenges for the benefits of science and society [1].
+
+This year, the NCSA team participated in MLPerf HPC v1.0 with the DeepCAM and Open Catalyst benchmarks carried out on the Hardware-Accelerated Learning (HAL) system [2]. This system is composed of 16 IBM AC922 8335-GTH compute nodes, each containing two 20-core IBM POWER9 CPUs, 256 GB memory, four NVIDIA V100 GPUs with NVLink 2.0, and an EDR InfiniBand adapters to provide high-performance communication. The two storage nodes provide 224 TB of usable NVMe SSD-based storage capable of a peak cluster-aggregate bandwidth of over 90GB/s.
+
+The experience we obtained from this year's submission has already benefited multiple research projects, especially for their software environment configuration and optimization. Moreover, the insights we learned from this year will also contribute to the design of our future ML/DL systems.
+
+[1] http://www.ncsa.illinois.edu/
+
+[2] https://wiki.ncsa.illinois.edu/display/ISL20/HAL+cluster
+
+
+== NVIDIA
+
+Cutting edge HPC is blending simulation with AI to reach new levels of performance and accuracy.  Recent advances in molecular dynamics, astronomy and climate simulation all took this approach to making scientific breakthroughs, a trend driving the adoption of exascale AI.  
+
+The new MLPerf HPC benchmarks help users compare HPC systems using this style of computing. NVIDIA-powered systems led on four of five benchmarks in the rankings.  
+
+Compared to the best v0.7 results, NVIDIA’s supercomputer Selene achieved a 5x better result for cosmoflow at 2x the scale and nearly 7x for deepcam at 4x the scale.  LBNL/Perlmutter lead the new opencatalyst benchmark using 2048 NVIDIA A100s. In the weak-scaling category, Selene lead deepcam at 16 nodes per instance and 256 simultaneous instances.
+
+The MLPerf HPC benchmarks are meant to model the types of workloads HPC centers may perform:
+
+* Cosmoflow - physical quantity estimation from cosmological image data
+* Deepcam - identification of hurricanes and atmospheric rivers in climate simulation data
+* Opencatalyst (new) - predict energies of molecular configurations based on graph connectivity
+
+Optimizations used to achieve MLPerf HPC v1.0 results:
+
+* DALI accelerates data processing
+* Use of CUDA graphs reduces small-batch latency
+* SHARP accelerates communication
+* Async DRAM prefetching removes IO from critical path
+* New fused kernels developed
+
+The NVIDIA ecosystem submitted with commercially available platforms using three generations of NVIDIA GPUs (P100, V100, and A100). Supercomputing centers Julich, Argonne National Lab, Lawrence Berkeley National Lab, Swiss National Supercomputing Centre, NCSA, and the Texas Advanced Computing Center made direct submissions, accounting for seven of the eight participants. 
+
+The NVIDIA platform excels in both performance and usability, offering a single leadership platform from data center to edge to cloud.  NVIDIA HPC and AI accelerates 2400+ applications today. 
+
+All software used for NVIDIA submissions is available from the MLPerf repository, though node and cluster specific tuning is required to get the most from the benchmarks. We constantly add these cutting-edge MLPerf improvements into our Deep learning framework containers available on NGC, our software hub for GPU applications.
+
+
+== Texas Advanced Computing Center (TACC)
+
+Texas Advanced Computing Center (TACC) aims to facilitate novel discoveries that advance science and society through advanced computing technologies. TACC designs and operates some of the world's most powerful supercomputers, including Frontera, Longhorn, and Stampede2. The Longhorn system consists of 108 hybrid CPU/GPU compute nodes powered by IBM POWER9 processors and NVIDIA Tesla V100 GPUs. Each node provides 40 cores on two sockets, four GPUs, 256 GB of RAM, 900 GB of local storage, and interconnects through Mellanox EDR InfiniBand with other nodes. Longhorn's multiple GPUs per node facilitate a powerful tool for the research carried out in astronomy and cosmology,  fluid particulate, material research, biophysics, and deep learning domains. In 2020, COVID-19 research performed on the Longhorn system won the Association for Computing Machinery Gordon Bell Special Prize in High Performance Computing.
+
+MLCommons HPC applications, e.g., CosmoFlow and Deepcam, provide an invaluable opportunity to understand the infrastructure requirements of next-generation Machine Learning and  Deep Learning applications. This year, TACC participated in MLCommons HPC v1.0 benchmarking by submitting the performance of Cosmoflow and Deepcam applications at 32 nodes (128  Tesla V100 GPUs) of its Longhorn system [1]. The lessons learned from these submissions will help envision the architecture of forthcoming TACC systems that will assist its rapidly growing AI users in solving intractable problems deterministically.
+ 
+[1] https://www.tacc.utexas.edu/systems/longhorn
