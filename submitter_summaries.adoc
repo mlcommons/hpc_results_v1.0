@@ -1,7 +1,7 @@
-= MLPerf HPC Training v1.0 Results Discussion
+= MLPerf™ HPC Training v1.0 Results Discussion
 
 
-The following descriptions were provided by the submitting organizations as a supplement to help the public understand the submissions and results. The statements do not reflect the opinions or views of MLCommons. 
+The following descriptions were provided by the submitting organizations as a supplement to help the public understand the submissions and results. The statements do not reflect the opinions or views of MLCommons™. 
 
 == Argonne National Laboratory (ANL)
 
